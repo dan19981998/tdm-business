@@ -1,0 +1,60 @@
+.brands {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+
+    p { 
+        margin-bottom: 20px; 
+        text-align: center;
+    }
+
+    .acf-carousel {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+
+        .carousel-track {
+            display: flex;
+            width: max-content;
+            animation: scroll-carousel 40s linear infinite;
+            gap: 40px;
+
+            @media (max-width: 768px) {
+                gap: 15px;
+            }
+
+            .carousel-slide {
+                flex: 0 0 auto;
+                border: 2px solid #f6f6f6;
+                border-radius: 40px;
+                overflow: hidden;
+                box-shadow: 2px 2px 2px #f7f7f7;
+
+                @media (max-width: 768px) {
+                    border-radius: 20px;
+                }
+
+                img {
+                    display: block;
+                    width: auto;
+                    height: 300px;
+                    object-fit: cover;
+
+                    @media (max-width: 768px) {
+                        height: 170px;
+                    }
+                }
+            }
+        }
+    }
+
+    @keyframes scroll-carousel {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+}

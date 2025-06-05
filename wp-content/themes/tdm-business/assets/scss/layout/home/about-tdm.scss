@@ -1,0 +1,117 @@
+.about {
+    height: 620px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    @media (max-width: 1500px) {
+      height: 500px;
+    }
+  
+    @media (max-width: 1000px) {
+      height: 600px;
+    }
+  
+    .about-wrapper {
+      max-width: var(--site-max-width);
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-evenly;
+      align-items: center;
+  
+      @media (max-width: 1000px) {
+        flex-direction: column;
+        gap: 30px;
+      }
+    }
+  
+    .intro {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+  
+      @media (max-width: 1000px) {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+      }
+  
+      h2 {
+        background: linear-gradient(45deg, #ffffff, #a3a3a3);
+        background-clip: text;
+        margin-bottom: 15px;
+      }
+  
+      h3 {
+        color: white;
+        margin-bottom: 30px;
+        background: unset;
+        -webkit-text-fill-color: unset;
+      }
+  
+      p {
+        color: white;
+        text-align: left;
+  
+        @media (max-width: 1000px) {
+          text-align: center;
+        }
+      }
+    }
+  
+    .definition {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      background: linear-gradient(90deg, #494949, hsl(0deg 0% 100% / 0%));
+      border-radius: 20px;
+      padding: 50px 20px;
+      width: 25%;
+      border: 1.5px solid white;
+  
+      @media (max-width: 1000px) {
+        width: 75%;
+        padding: 20px;
+      }
+    }
+  
+    p:nth-child(1) {
+      font-size: 44px;
+      color: white;
+  
+      @media (max-width: 1000px) {
+        font-size: 28px;
+      }
+    }
+  
+    p:nth-child(2) {
+      font-style: italic;
+      color: white;
+      font-size: 24px;
+      margin-top: 20px;
+      font-family: 'eb garamond';
+  
+      @media (max-width: 1000px) {
+        margin-top: 10px;
+        font-size: 20px;
+      }
+    }
+  
+    p:nth-child(4) {
+      margin-top: 20px;
+      color: white;
+      font-style: italic;
+      font-size: 22px;
+      line-height: 40px;
+  
+      @media (max-width: 1000px) {
+        margin-top: 10px;
+        font-size: 18px;
+      }
+    }
+  
+    hr {
+      border-color: white;
+      width: 100%;
+    }
+  }  

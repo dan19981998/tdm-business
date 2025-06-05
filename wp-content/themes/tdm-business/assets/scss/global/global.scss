@@ -1,0 +1,106 @@
+@use "header";
+@use "footer";
+
+:root {
+    --site-max-width: 1600px;
+  }
+  
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+  margin-top: 0px!important;
+}
+
+section {
+  margin-top: 90px;
+
+  @media (max-width: 768px){
+    margin-top: 60px;
+  }
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+h2 {
+  font-size: 64px;
+  background: linear-gradient(90deg, #333333, #333333b3);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  @media (max-width: 768px) {
+    font-size: 38px;
+  }
+}
+
+h3 {
+  font-size: 28px;
+  background: linear-gradient(90deg, #333333, #333333b3);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+}
+
+ p {
+  font-size: 18px;
+  color: #333333;
+  line-height: 30px;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    line-height: 25px;
+  }
+ }
+
+
+.animate-border {
+  --gradient-angle: 0deg;
+  align-self: start;
+  animation: rotation 5s linear infinite;
+  background: linear-gradient(var(--gradient-angle), #fff, transparent);
+  padding: 0.125rem;
+  border-radius: 20px;
+
+  @media (max-width: 768px) {
+    border-radius: 10px;
+  }
+}
+
+
+@keyframes rotation {
+  0% {
+    --gradient-angle: 0deg;
+  }
+  to {
+    --gradient-angle: 360deg;
+  }
+}
+
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.cta {
+  width: 300px;
+  padding: 20px 0px;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+
+  @media (max-width: 768px) {
+    border-radius: 10px;
+    padding: 12px 0px;
+    width: 200px;
+  }
+}
