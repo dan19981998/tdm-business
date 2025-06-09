@@ -24,8 +24,9 @@
               'menu'       => 'Main',
               'container'  => false,
               'menu_id'    => 'menu-main',
-              'menu_class' => '',  // container ul gets no extra classes
+              'menu_class' => '',  
               'fallback_cb'=> false,
+              'depth'      => 3,
             ]);
           ?>
           <div class="animate-border">
@@ -44,7 +45,7 @@
               stroke-width="2"
               d="M4 6h16M4 12h16M4 18h16" />
           </svg>
-          </button>
+        </button>
       </div>
 
       <div id="mobile-menu" class="mobile-menu">
@@ -55,6 +56,7 @@
             'menu_id'    => 'menu-main-mobile',
             'menu_class' => '',
             'fallback_cb'=> false,
+            'depth'      => 2,
           ]);
         ?>
         <div class="animate-border">
@@ -69,3 +71,19 @@
   <?php wp_footer(); ?>
 </body>
 </html>
+
+<style>
+.subnav-a-img1 > a::before {
+  background-image: url("<?php echo get_template_directory_uri(); ?>/assets/images/subnav1.png");
+}
+.subnav-a-img2 > a::before {
+  background-image: url("<?php echo get_template_directory_uri(); ?>/assets/images/subnav2.png");
+}
+
+.subnav-b-img1 > a::before {
+  background-image: url("<?php echo get_template_directory_uri(); ?>/assets/images/about-tdm.png");
+}
+.subnav-b-img2 > a::before {
+  background-image: url("<?php echo get_template_directory_uri(); ?>/assets/images/about-tdm.png");
+}
+  </style>

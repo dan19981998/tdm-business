@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // ----------------------------
-  // Tab‐navigation logic (unchanged)
-  // ----------------------------
+
   const tabs = document.querySelectorAll(".tab-nav-item");
   const contents = document.querySelectorAll(".tab-content");
 
@@ -99,7 +97,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
   cloneActiveAccordionOnLoad();
 
- 
   window.addEventListener("resize", () => {
     document
       .querySelectorAll(".team-accordion__panel .team-cards")
@@ -115,3 +112,10 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+var items = document.querySelectorAll('.faq-item');
+items.forEach(function(item) {
+  var btn = item.querySelector('.faq-question');
+  btn.addEventListener('click', function() {
+    item.classList.toggle('active');
+  });
+});

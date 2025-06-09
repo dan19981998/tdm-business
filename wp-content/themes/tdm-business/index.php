@@ -6,11 +6,7 @@
 <?php get_template_part("template-parts/home/about-tdm") ?>
 <?php get_template_part("template-parts/home/what-we-do") ?>
 <?php get_template_part("template-parts/home/team") ?>
-<section></section>
-<section></section>
-<section></section>
-<section></section>
-
+<?php get_template_part("template-parts/home/faq") ?>
 </main>
 
 <?php get_footer(); ?>

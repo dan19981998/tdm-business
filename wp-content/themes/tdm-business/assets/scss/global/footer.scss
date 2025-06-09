@@ -1,68 +1,161 @@
-
 .site-footer {
-    background-color: #222;
-    color: #eee;
-    padding: 3rem 0;
-    font-size: 0.95rem;
-    line-height: 1.6;
-  
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1rem;
-    }
-  
-    .footer-widgets {
-      display: flex;
-      justify-content: space-between;
-    
-      gap: 2rem;
-      margin-bottom: 2rem;
-  
-      .footer-menu-column {
-        
-        flex: 1;
+  padding: 5rem 0;
+  line-height: 2;
+  font-size: 18px;
 
-        .footer-menu {
-          list-style: none;
-          margin: 0;
-          padding: 0;
-  
-          li {
-            margin-bottom: 0.5rem;
-  
-            a {
-              color: #ccc;
-              text-decoration: none;
-              transition: color 0.2s ease;
-  
-              &:hover,
-              &.current-menu-item {
-                color: #fff;
-              }
+  @media (max-width: 786px) {
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 2rem 0;
+  }
+
+  .container {
+    max-width: var(--site-max-width);
+    margin: 0 auto;
+  }
+
+  .footer-widgets {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding: 0px 10px;
+
+    .footer-logo-social-column {
+      max-width: 350px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .footer-logo {
+        margin-bottom: 1.5rem;
+
+        img {
+          max-width: 100%;
+          height: auto;
+          display: block;
+
+          @media (max-width: 768px) {
+            max-width: 200px;
+          }
+        }
+      }
+
+      .footer-social-icons {
+        display: flex;
+        gap: 2.75rem;
+
+        @media (max-width: 768px) {
+          gap: 1.75rem;
+        }
+
+        a {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 2rem;
+          height: 2rem;
+          color: #fff;
+          transition: color 0.2s ease;
+
+          svg {
+            width: 100%;
+            height: 100%;
+            fill: currentColor;
+
+            @media (max-width: 768px) {
+              width: 30px;
+              height: 30px;
             }
           }
         }
       }
     }
-  
-    .site-info {
-      text-align: center;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      padding-top: 1rem;
-      font-size: 0.85rem;
-      color: #aaa;
+
+    .footer-menu-column {
+      flex: 1 1 180px;
+      max-width: 200px;
+
+      .footer-menu-title {
+        margin-bottom: 0.75rem;
+        color: #fff;
+        text-transform: uppercase;
+        font-style: italic;
+      }
+
+      .footer-menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          margin-bottom: 0.5rem;
+
+          a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.2s ease;
+
+            &:hover,
+            &.current-menu-item {
+              color: #fff;
+            }
+          }
+        }
+      }
     }
-  
-    @media (max-width: 768px) {
-      .footer-widgets {
-        flex-direction: column;
-        gap: 1.5rem;
-  
-        .footer-menu-column {
-          width: 100%;
+
+    .footer-contact-column {
+      flex: 1 1 180px;
+      max-width: 200px;
+
+      .footer-contact-title {
+        margin-bottom: 0.75rem;
+        color: #fff;
+        text-transform: uppercase;
+        font-style: italic;
+      }
+
+      .footer-email {
+        a {
+          color: #fff;
+          text-decoration: none;
+          transition: color 0.2s ease;
         }
       }
     }
   }
-  
+
+  .site-info {
+    text-align: center;
+    border-top: 2px solid white;
+    padding-top: 3rem;
+
+    p {
+      color: #fff;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footer-widgets {
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-left: 10px;
+
+      .footer-logo-social-column,
+      .footer-menu-column,
+      .footer-contact-column {
+        max-width: 100%;
+        flex: 1 1 100%;
+      }
+
+      .footer-logo-social-column {
+        margin-bottom: 1.5rem;
+      }
+
+      .footer-contact-column {
+        margin-top: 1.5rem;
+      }
+    }
+  }
+}

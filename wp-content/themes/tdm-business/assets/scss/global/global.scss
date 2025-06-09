@@ -1,9 +1,14 @@
 @use "header";
 @use "footer";
+@use "faq";
 
 :root {
     --site-max-width: 1600px;
   }
+
+  div#wpadminbar {
+    display: none !important;
+}
   
 body,
 html {

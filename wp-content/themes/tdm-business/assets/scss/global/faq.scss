@@ -1,0 +1,147 @@
+.faq-container {
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 5rem 0;
+
+    @media (max-width: 768px) {
+        padding: 1rem 0;
+    }
+
+    .faq-wrapper {
+        padding: 60px 10px;
+        max-width: 1400px;
+        background-color: white;
+        border-radius: 20px;
+        height: 500px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        border: 1px solid #eaeaea;
+        gap: 50px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            margin: 20px;
+            padding: 10px;
+            height: unset;
+
+            .faq-content,
+            .faq-questions {
+                width: 100%;
+                padding-right: 0;
+            }
+        }
+
+        .faq-content {
+            flex: 2;
+            padding-left: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            @media (max-width: 768px) {
+                padding-left: 0;
+            }
+
+            p {
+                width: 80%;
+            }
+
+            .cta-wrapper {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                img {
+                    @media (max-width: 786px) {
+                        width: 100px;
+                    }
+                }
+
+                .animate-border {
+                    background: linear-gradient(var(--gradient-angle), #0494c9, transparent);
+
+                    .cta {
+                        background-color: #00aff085;
+
+                        @media (max-width: 768px) {
+                            width: 175px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .faq-questions {
+            flex: 1.6;
+            padding-right: 50px;
+
+            @media (max-width: 768px) {
+                padding-right: 0px;
+            }
+
+            .faq-accordion {
+                .faq-item {
+                    background-color: #f1f1f1;
+                    margin-bottom: 35px;
+                    border-radius: 20px;
+
+                    @media (max-width: 768px) {
+                        border-radius: 10px;
+                        margin-bottom: 20px;
+                    }
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+
+                    .faq-question {
+                        background: none;
+                        border: none;
+                        width: 100%;
+                        text-align: left;
+                        padding: 1.4rem;
+                        font-size: 20px;
+                        cursor: pointer;
+                        position: relative;
+                        color: #333333;
+
+                        &:after {
+                            content: '+';
+                            position: absolute;
+                            right: 1rem;
+                            font-size: 1.25rem;
+                            transition: transform 0.3s ease;
+                        }
+
+                        @media (max-width: 768px) {
+                            padding: 1rem;
+                        }
+                    }
+
+                    .faq-answer {
+                        max-height: 0;
+                        overflow: hidden;
+                        padding: 0 1rem;
+                        font-size: 1rem;
+                        line-height: 1.6;
+                        color: #555;
+                        transition: max-height 0.3s ease, padding 0.3s ease;
+                    }
+
+                    &.active {
+                        .faq-question:after {
+                            content: '-';
+                            transform: rotate(180deg);
+                        }
+
+                        .faq-answer {
+                            max-height: 500px;
+                            padding: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

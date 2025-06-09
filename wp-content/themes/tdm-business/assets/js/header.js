@@ -19,3 +19,11 @@ btn.addEventListener('click', () => {
     iconPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
   }
 });
+
+
+document.querySelectorAll("#menu-main-mobile .menu-item-has-children > a")
+  .forEach(link => {
+    link.addEventListener("click", e => {
+    });
+  });
+
