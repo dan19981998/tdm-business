@@ -1,0 +1,98 @@
+.chatting-services-container {
+    background-color: #f9f9f9;
+    margin-top: 0;
+    padding: 90px 0;
+  
+    .wrapper {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 30px;
+  
+      .content {
+        flex: 1;
+        padding: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+  
+        h2 {
+          margin-bottom: 20px;
+        }
+  
+        .service-features-list {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 16px;
+          margin: 40px 0;
+          padding: 0;
+          list-style: none;
+  
+          .service-feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+  
+            .lottie-tick {
+              width: 55px;
+            }
+            .feature-text {
+              font-size: 18px;
+            }
+          }
+        }
+  
+        .animate-border {
+          background: linear-gradient(var(--gradient-angle), #dd4cf9, transparent);
+  
+          .cta {
+            background-color: rgba(158, 42, 177, 0.75);
+          }
+        }
+      }
+  
+      .content-image {
+        padding: 70px 70px 70px 0;
+  
+        img {
+          width: 100%;
+          display: block;
+        }
+      }
+    }
+  
+    @media (max-width: 1000px) {
+      padding: 20px 0;
+  
+      .wrapper {
+        flex-direction: column;
+        margin: 10px;
+  
+        .content {
+          padding: 30px 15px;
+  
+          .service-features-list {
+            grid-template-columns: 1fr;
+            margin: 30px 0;
+  
+            .service-feature-item {
+              .lottie-tick {
+                width: 40px;
+              }
+              .feature-text {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+  
+        .content-image {
+          padding: 20px;
+        }
+      }
+    }
+  }
+  

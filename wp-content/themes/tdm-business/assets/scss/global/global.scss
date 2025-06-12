@@ -1,4 +1,5 @@
 @use "header";
+@use "hero";
 @use "footer";
 @use "faq";
 
@@ -19,6 +20,7 @@ html {
   margin-top: 0px!important;
 }
 
+
 section {
   margin-top: 90px;
 
@@ -31,8 +33,24 @@ h1, h2, h3, h4, p {
   margin: 0;
 }
 
+h1 {
+  font-size: 100px;
+  text-align: center;
+  background: linear-gradient(90deg, #fff, #ffffff5e);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @media (max-width: 1500px) {
+    font-size: 75px;
+  }
+
+  @media (max-width: 1000px) {
+    font-size: 38px;
+  }
+}
+
 h2 {
-  font-size: 64px;
+  font-size: 58px;
   background: linear-gradient(90deg, #333333, #333333b3);
   -webkit-text-fill-color: transparent;
   background-clip: text;

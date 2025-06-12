@@ -1,0 +1,2 @@
+<div class="hero__background" style="background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/background-hero.png')"></div>
+<canvas id="hero-canvas" class="hero__canvas"></canvas>

@@ -1,0 +1,144 @@
+.testimonial-container {
+  width: 100%;
+  overflow: hidden;
+
+  .testimonial-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 1140px;
+    margin: 0 auto;
+    gap: 20px;
+    padding: 0 20px;
+
+    h2 {
+      margin-bottom: 20px;
+    }
+  }
+
+  .testimonial-column {
+    background-color: #fbf0ff;
+    padding: 40px;
+    border: 2px solid #d4d4d4;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .testimonial-content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .testimonial-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h3 {
+      margin: 0;
+      font-weight: 700;
+      color: #0c91d7;
+      background-color: #ebf9ff;
+      align-self: flex-start;
+    }
+
+    h4 {
+      margin: 0;
+      font-size: 40px;
+      font-weight: 500;
+    }
+
+    .iconAndName {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+
+      img {
+        width: 50px;
+        border-radius: 100px;
+      }
+
+      .name {
+        font-size: 16px;
+      }
+    }
+
+    button {
+      align-self: flex-start;
+    }
+    .animate-border {
+        background: linear-gradient(var(--gradient-angle), #dd4cf9, transparent);
+
+        .cta {
+          background-color: rgba(158, 42, 177, 0.75);
+        }
+      }
+  }
+
+  .testimonial-video {
+    .video-container {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        aspect-ratio: 1;
+        cursor: pointer;
+        border-radius: 0 10px 10px 0;
+      }
+    }
+  }
+
+  @media (max-width: 1000px) {
+    margin-top: 50px;
+    height: auto;
+    border-radius: 50px 50px 0 0;
+
+    .testimonial-wrapper {
+      padding: 45px 15px 25px;
+    }
+
+    .testimonial-column {
+      padding: 10px;
+    }
+
+    .testimonial-content-wrapper {
+      flex-direction: column-reverse;
+      padding: 10px;
+    }
+
+    .testimonial-content {
+      gap: 10px;
+
+      h4 {
+        font-size: 24px;
+      }
+
+      h3 {
+        display: none;
+      }
+
+      .iconAndName {
+        gap: 15px;
+
+        img {
+          width: 40px;
+        }
+      }
+    }
+
+    .testimonial-video .video-container video {
+      border-radius: 10px 10px 0 0;
+    }
+  }
+}

@@ -200,7 +200,6 @@ function typeWord(word, i = 0) {
     el.textContent = word.slice(word.length - i, word.length);
     setTimeout(() => typeWord(word, i + 1), 80);
   } else {
-    // FULL WORD IS PRINTED, WAIT a bit, THEN highlight and pause blinking
     setTimeout(() => {
       cursor.classList.add('no-blink'); // Cursor solid during highlight/remove
       el.classList.add('highlight');

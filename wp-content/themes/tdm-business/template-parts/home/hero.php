@@ -1,13 +1,6 @@
 <section class="hero">
-  <div
-    class="hero__background"
-    style="background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/background-hero.png')"
-  ></div>
 
-  <canvas
-    id="hero-canvas"
-    class="hero__canvas"
-  ></canvas>
+<?php get_template_part("partials/hero-background") ?>
 
   <div class="hero-slider-stack">
   <h1><?php the_field('hero_heading'); ?></h1>
